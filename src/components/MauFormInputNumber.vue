@@ -98,7 +98,7 @@ export default {
   methods: {
     getBootstrapValidationClass: ValidatorHelper.getBootstrapValidationClass,
     updateValue (numberString) {
-      let cleanedNumber = cleanNumber(numberString)
+      let cleanedNumber = numberString !== '' ? cleanNumber(numberString) : ''
       this.$emit('input', cleanedNumber)
     }
   },
