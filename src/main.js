@@ -1,8 +1,8 @@
-import MauBanner from './components/Banner.vue'
+import MauFormInputText from './components/MauFormInputText'
 
 const MauComponentsPlugin = {
   install (Vue) {
-    Vue.component('MauBanner', MauBanner)
+    Vue.component('MauFormInputText', MauFormInputText)
   }
 }
 

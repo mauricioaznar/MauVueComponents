@@ -1,6 +1,6 @@
 {
   "name": "mau-vue-components",
-  "version": "0.4.0",
+  "version": "0.6.0",
   "private": false,
   "main": "./dist/maguas.common.js",
   "files": [
@@ -11,7 +11,7 @@
     "*.js"
   ],
   "scripts": {
-    "serve": "vue-cli-service serve ./src/index.js",
+    "dev": "vue-cli-service serve ./src/index.js",
     "build": "vue-cli-service build",
     "build-bundle": "vue-cli-service build --target lib --name maguas ./src/main.js",
     "lint": "vue-cli-service lint",
@@ -19,8 +19,11 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "bootstrap": "^4.3.1",
     "core-js": "^2.6.5",
-    "vue": "^2.6.10"
+    "text-mask-addons": "^3.8.0",
+    "vue": "^2.6.10",
+    "vue-text-mask": "^6.1.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.7.0",
