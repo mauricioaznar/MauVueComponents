@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <banner>This is a banner</banner>
+    <banner>This isasdfa banner</banner>
   </div>
 </template>
 
