@@ -1,6 +1,6 @@
 {
   "name": "mau-vue-components",
-  "version": "0.9.0",
+  "version": "0.10.0",
   "private": false,
   "main": "./dist/maguas.common.js",
   "files": [
@@ -23,6 +23,7 @@
     "core-js": "^2.6.5",
     "text-mask-addons": "^3.8.0",
     "vue": "^2.6.10",
+    "vue-flatpickr-component": "^8.1.2",
     "vue-text-mask": "^6.1.2"
   },
   "devDependencies": {
