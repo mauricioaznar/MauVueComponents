@@ -26,7 +26,7 @@
 
 <script>
 import flatPickr from 'vue-flatpickr-component'
-import { Spanish } from '../../node_modules/flatpickr/dist/l10n/es'
+import { Spanish } from 'flatpickr/dist/l10n/es'
 import 'flatpickr/dist/flatpickr.css'
 import ValidatorHelper from '../functions/ValidatorHelper'
 const rangeSeparator = ' al '
