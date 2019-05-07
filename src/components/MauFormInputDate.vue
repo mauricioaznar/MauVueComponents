@@ -1,5 +1,5 @@
 <template>
-  <div class="mau-form-input-date">
+  <div>
     <label
             v-if="label"
             class="form__label">
