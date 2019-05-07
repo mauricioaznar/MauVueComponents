@@ -5,14 +5,14 @@ const housePhone = [/\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/]
 const regularNumber = createNumberMask({
   prefix: '',
   suffix: '',
-  integerLimit: 6,
+  integerLimit: 9,
   includeThousandsSeparator: false,
   allowNegative: false
 })
 const regularNumberNegative = createNumberMask({
   prefix: '',
   suffix: '',
-  integerLimit: 6,
+  integerLimit: 9,
   includeThousandsSeparator: false,
   allowNegative: true
 })
