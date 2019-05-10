@@ -9,6 +9,16 @@
       <div class="form-group">
         <mau-form-input-date :error="''" :initialValue="'ass'" :name="'text-input'" ></mau-form-input-date>
       </div>
+      <div class="form-group">
+        <mau-form-input-select-static
+          :error="''"
+          :initialObject="initialObject"
+          :displayProperty="'text'"
+          :trackBy="'value'"
+          :name="'text-input'"
+          :availableObjects="availableObjects">
+        </mau-form-input-select-static>
+      </div>
     </div>
   </div>
 </template>
@@ -16,15 +26,24 @@
 <script>
 import MauFormInputText from './components/MauFormInputText.vue'
 import MauFormInputDate from './components/MauFormInputDate.vue'
+import MauFormInputSelectStatic from './components/MauFormInputSelectStatic.vue'
 
 export default {
   data () {
     return {
+      availableObjects: [
+        { value: 1, text: 'Example 1' },
+        { value: 2, text: 'Example 2' },
+        { value: 3, text: 'Example 3' },
+        { value: 4, text: 'Example 4' }
+      ],
+      initialObject: { value: 1, text: 'Example 1' }
     }
   },
   components: {
     MauFormInputText,
-    MauFormInputDate
+    MauFormInputDate,
+    MauFormInputSelectStatic
   }
 }
 </script>

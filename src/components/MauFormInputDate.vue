@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mau-form-input-date-container">
     <label
             v-if="label"
             class="form__label">
@@ -13,7 +13,7 @@
             :placeholder="'Selecciona una fecha'"
             :disabled="disabled"
             @change="updateValue"
-            class="w-100 h-100 form-control mau-form-input-date"
+            class="w-100 form-control mau-form-input-date"
     >
     </flat-pickr>
     <div class="invalid-feedback">
@@ -138,12 +138,14 @@ export default {
 </script>
 
 <style lang="scss">
-  .mau-form-input-date {
-    background-color: #ffffff;
-    height: 38px;
-  }
-  .mau-form-input-date:disabled {
-    background-color: #e9ecef !important;
-    cursor: default;
+  .mau-form-input-date-container {
+    .mau-form-input-date.form-control {
+      background-color: #ffffff;
+      height: 38px;
+    }
+    .mau-form-input-date:disabled {
+      background-color: #e9ecef !important;
+      cursor: default;
+    }
   }
 </style>
