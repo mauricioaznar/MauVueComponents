@@ -13,7 +13,7 @@
             :placeholder="'Selecciona una fecha'"
             :disabled="disabled"
             @change="updateValue"
-            class="w-100 h-100 form-control"
+            class="w-100 h-100 form-control mau-form-input-date"
     >
     </flat-pickr>
     <div class="invalid-feedback">
@@ -43,13 +43,13 @@ export default {
       rangeConfig: {
         conjunction: ' - ',
         mode: 'range',
-        altInputClass: 'mau-form-input-date',
+        altInputClass: '',
         locale: Spanish
       },
       dateConfig: {
         wrap: true,
         altInput: true,
-        altInputClass: 'mau-form-input-date',
+        altInputClass: '',
         dateFormat: 'Y-m-d',
         locale: Spanish
       }
@@ -122,11 +122,11 @@ export default {
       let bootstrapValidationClass = this.getBootstrapValidationClass(this.error)
       if (this.error !== '') {
         if (!prevAltInputClass.includes(bootstrapValidationClass)) {
-          this.config.altInputClass = prevAltInputClass + ' ' + bootstrapValidationClass
+          this.config.altInputClass = bootstrapValidationClass
           this.keyValue++
         }
       } else {
-        this.config.altInputClass = 'mau-form-input-date'
+        this.config.altInputClass = ''
         this.keyValue++
       }
     },
