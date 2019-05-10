@@ -4,10 +4,10 @@
     <div class="container">
       <div class="jumbotron">asdf</div>
       <div class="form-group">
-        <mau-form-input-text :error="''" :initialValue="'ass'" :name="'text-input'" ></mau-form-input-text>
+        <mau-form-input-text :error="''" :initialValue="'Ass'" :name="'text-input'" ></mau-form-input-text>
       </div>
       <div class="form-group">
-        <mau-form-input-date :error="''" :initialValue="'ass'" :name="'text-input'" ></mau-form-input-date>
+        <mau-form-input-date :error="''" :initialValue="'01/01/1990'" :name="'text-input'" ></mau-form-input-date>
       </div>
       <div class="form-group">
         <mau-form-input-select-static
