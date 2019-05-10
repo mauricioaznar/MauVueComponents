@@ -13,7 +13,7 @@
             :placeholder="'Selecciona una fecha'"
             :disabled="disabled"
             @change="updateValue"
-            class="w-100 h-100"
+            class="w-100 h-100 form-control"
     >
     </flat-pickr>
     <div class="invalid-feedback">
@@ -43,13 +43,13 @@ export default {
       rangeConfig: {
         conjunction: ' - ',
         mode: 'range',
-        altInputClass: 'form-control mau-form-input-date',
+        altInputClass: 'mau-form-input-date',
         locale: Spanish
       },
       dateConfig: {
         wrap: true,
         altInput: true,
-        altInputClass: 'form-control mau-form-input-date',
+        altInputClass: 'mau-form-input-date',
         dateFormat: 'Y-m-d',
         locale: Spanish
       }
@@ -126,7 +126,7 @@ export default {
           this.keyValue++
         }
       } else {
-        this.config.altInputClass = 'form-control mau-form-input-date'
+        this.config.altInputClass = 'mau-form-input-date'
         this.keyValue++
       }
     },
