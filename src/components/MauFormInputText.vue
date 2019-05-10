@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="mau-form-input-text-container">
         <label v-if="label" :for="name">
             {{label}}
         </label>
@@ -9,7 +9,7 @@
                 :name="name"
                 type="text"
                 :disabled="disabled"
-                class="form-control"
+                class="form-control mau-form-input-text"
                 :placeholder="placeholder"
                 :class="getBootstrapValidationClass(error)"
                 @input="updateValue"
@@ -20,7 +20,7 @@
                 :name="name"
                 type="password"
                 :disabled="disabled"
-                class="form-control"
+                class="form-control mau-form-input-text"
                 :placeholder="placeholder"
                 :class="getBootstrapValidationClass(error)"
                 @input="updateValue"
@@ -29,7 +29,7 @@
                 v-if="type === textInputTypes.EMAIL"
                 :name="name"
                 v-model="stringValue"
-                class="form-control"
+                class="form-control mau-form-input-text"
                 :disabled="disabled"
                 :guide="true"
                 :mask="mask"
@@ -42,7 +42,7 @@
                 v-if="type === textInputTypes.HOUSE_PHONE"
                 :name="name"
                 v-model="stringValue"
-                class="form-control"
+                class="form-control mau-form-input-text"
                 :guide="true"
                 :disabled="disabled"
                 :mask="mask"
@@ -55,7 +55,7 @@
                 v-if="type === textInputTypes.CELLPHONE"
                 :name="name"
                 v-model="stringValue"
-                class="form-control"
+                class="form-control mau-form-input-text"
                 :guide="true"
                 :mask="mask"
                 :disabled="disabled"
@@ -177,5 +177,7 @@ export default {
 </script>
 
 <style lang="scss">
-
+  .mau-form-input-text {
+    height: 38px;
+  }
 </style>

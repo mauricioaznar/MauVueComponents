@@ -1,12 +1,12 @@
 <template>
-    <div>
+    <div class="mau-form-input-number-container">
         <label
                 v-if="label"
         >
             {{ label }}
         </label>
         <masked-input
-                class="form-control"
+                class="form-control mau-form-input-number"
                 v-model="numberString"
                 :mask="mask"
                 :disabled="disabled"
@@ -109,3 +109,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  .mau-form-input-number {
+    height: 38px;
+  }
+</style>

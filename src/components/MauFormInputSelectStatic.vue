@@ -120,6 +120,7 @@ export default {
   .mau-form-input-select-static-container {
     .mau-form-input-select-static {
       padding: 0;
+      height: 38px;
     }
   }
 </style>
