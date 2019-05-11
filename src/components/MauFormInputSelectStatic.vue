@@ -10,7 +10,9 @@
                 :multiple="multiselect"
                 :label="displayProperty"
                 :track-by="trackBy"
-                :options="availableObjects">
+                :options="availableObjects"
+                :clearable="hasClear"
+        >
             <template slot="option" slot-scope="option">
                 {{option[displayProperty]}}
             </template>
