@@ -50,10 +50,10 @@
 
 <script>
   import moment from 'moment'
-  import MauFormInputDate from 'MauFormInputDate.vue'
-  import MauFormInputSelectStatic from 'MauFormInputSelectStatic.vue'
+  import MauFormInputDate from './MauFormInputDate.vue'
+  import MauFormInputSelectStatic from './MauFormInputSelectStatic.vue'
   export default {
-    name: 'MauFormInputDateTime',
+    name: 'MauFormGroupDateTime',
     data () {
       return {
         dateTime: '',

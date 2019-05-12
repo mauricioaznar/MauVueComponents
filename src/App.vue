@@ -16,9 +16,17 @@
           :displayProperty="'text'"
           :trackBy="'value'"
           :name="'text-input'"
-          :availableObjects="availableObjects">
+          :availableObjects="availableObjects"
+          :multiselect="false"
+        >
         </mau-form-input-select-static>
       </div>
+      <mau-form-group-date-time
+          name="form-group-date-time"
+          :error="''"
+          :initialValue="'01/01/1990 00:00:00'"
+          v-model="dateTime"
+      ></mau-form-group-date-time>
     </div>
   </div>
 </template>
@@ -27,6 +35,7 @@
 import MauFormInputText from './components/MauFormInputText.vue'
 import MauFormInputDate from './components/MauFormInputDate.vue'
 import MauFormInputSelectStatic from './components/MauFormInputSelectStatic.vue'
+import MauFormGroupDateTime from './components/MauFormGroupDateTime.vue'
 
 export default {
   data () {
@@ -37,13 +46,15 @@ export default {
         { value: 3, text: 'Example 3' },
         { value: 4, text: 'Example 4' }
       ],
-      initialObject: { value: 1, text: 'Example 1' }
+      initialObject: { value: 1, text: 'Example 1' },
+      dateTime: ''
     }
   },
   components: {
     MauFormInputText,
     MauFormInputDate,
-    MauFormInputSelectStatic
+    MauFormInputSelectStatic,
+    MauFormGroupDateTime
   }
 }
 </script>
