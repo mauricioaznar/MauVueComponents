@@ -12,7 +12,7 @@
       <div class="form-group">
         <mau-form-input-select-static
           :error="''"
-          :initialObject="initialObject"
+          :initialObject="initialSelectObject"
           :displayProperty="'text'"
           :trackBy="'value'"
           :name="'text-input'"
@@ -28,6 +28,30 @@
           :initialValue="'01/01/1990 00:00:00'"
           v-model="dateTime"
       ></mau-form-group-date-time>
+      <mau-form-group-check-boxes
+        v-model="checkBoxSelected"
+        :availableObjects="availableObjects"
+        :initialObjects="[availableObjects[0]]"
+        :display="'text'"
+      >
+      </mau-form-group-check-boxes>
+      <mau-form-group-radio
+        v-model="radioSelected"
+        :availableObjects="availableObjects"
+        :initialObject="{}"
+        :name="'radio'"
+        :display="'text'"
+        :error="''"
+      >
+      </mau-form-group-radio>
+      <mau-form-group-time
+        :initialTime="'00:00:00'"
+        :name="'time'"
+        v-model="timeS"
+        :label="' fin'"
+        :error="''"
+      >
+      </mau-form-group-time>
     </div>
   </div>
 </template>
@@ -37,6 +61,9 @@ import MauFormInputText from './components/MauFormInputText.vue'
 import MauFormInputDate from './components/MauFormInputDate.vue'
 import MauFormInputSelectStatic from './components/MauFormInputSelectStatic.vue'
 import MauFormGroupDateTime from './components/MauFormGroupDateTime.vue'
+import MauFormGroupCheckBoxes from './components/MauFormGroupCheckBoxes.vue'
+import MauFormGroupRadio from './components/MauFormGroupRadio.vue'
+import MauFormGroupTime from './components/MauFormGroupTime.vue'
 
 export default {
   data () {
@@ -47,15 +74,22 @@ export default {
         { value: 3, text: 'Example 3' },
         { value: 4, text: 'Example 4' }
       ],
-      initialObject: { value: 1, text: 'Example 1' },
-      dateTime: ''
+      initialSelectObject: { value: 1, text: 'Example 1' },
+      initialCheckBoxObjects: [],
+      dateTime: '',
+      timeS: '',
+      checkBoxSelected: '',
+      radioSelected: ''
     }
   },
   components: {
     MauFormInputText,
     MauFormInputDate,
     MauFormInputSelectStatic,
-    MauFormGroupDateTime
+    MauFormGroupDateTime,
+    MauFormGroupCheckBoxes,
+    MauFormGroupRadio,
+    MauFormGroupTime
   }
 }
 </script>
