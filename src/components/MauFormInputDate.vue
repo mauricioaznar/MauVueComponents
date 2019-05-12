@@ -32,7 +32,7 @@ import ValidatorHelper from '../functions/ValidatorHelper'
 const rangeSeparator = ' al '
 Spanish.rangeSeparator = rangeSeparator
 export default {
-  name: 'MauFormInputDateTime',
+  name: 'MauFormInputDate',
   data () {
     return {
       date: '',
