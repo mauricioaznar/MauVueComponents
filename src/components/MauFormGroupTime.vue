@@ -34,6 +34,7 @@ import ValidatorHelper from '../functions/ValidatorHelper'
 import MauFormInputSelectStatic from './MauFormInputSelectStatic.vue'
 import moment from 'moment'
 export default {
+  name: 'MauFormGroupTime',
   data () {
     return {
       time: '',
