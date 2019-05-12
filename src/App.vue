@@ -24,6 +24,7 @@
       <mau-form-group-date-time
           name="form-group-date-time"
           :error="''"
+          :label="' de inicio'"
           :initialValue="'01/01/1990 00:00:00'"
           v-model="dateTime"
       ></mau-form-group-date-time>
