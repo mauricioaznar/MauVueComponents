@@ -52,6 +52,13 @@
         :error="''"
       >
       </mau-form-group-time>
+      <mau-form-input-select-dynamic
+        :endpointName="'test'"
+        :error="''"
+        :displayProperty="'name'"
+        :name="'selectDynamic'">
+
+      </mau-form-input-select-dynamic>
     </div>
   </div>
 </template>
@@ -64,6 +71,7 @@ import MauFormGroupDateTime from './components/MauFormGroupDateTime.vue'
 import MauFormGroupCheckBoxes from './components/MauFormGroupCheckBoxes.vue'
 import MauFormGroupRadio from './components/MauFormGroupRadio.vue'
 import MauFormGroupTime from './components/MauFormGroupTime.vue'
+import MauFormInputSelectDynamic from './components/MauFormInputSelectDynamic.vue'
 
 export default {
   data () {
@@ -89,7 +97,8 @@ export default {
     MauFormGroupDateTime,
     MauFormGroupCheckBoxes,
     MauFormGroupRadio,
-    MauFormGroupTime
+    MauFormGroupTime,
+    MauFormInputSelectDynamic
   }
 }
 </script>
