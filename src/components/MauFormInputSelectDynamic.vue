@@ -1,16 +1,19 @@
 <template>
-    <div>
+    <div class="mau-form-input-select-dynamic-container">
         <label v-if="label">
             {{label}}
         </label>
         <vue-select
-                class="form-control p-0"
+                class="form-control mau-form-input-select-dynamic"
                 :class="getBootstrapValidationClass(error)"
                 v-model="selected"
                 :multiple="multiselect"
                 :label="displayProperty"
                 :onSearch="search"
                 :track-by="'id'"
+                :clearable="hasClear"
+                :disabled="disabled"
+
                 :options="options">
             <template slot="option" slot-scope="option">
                 {{option[displayProperty]}}
@@ -100,6 +103,18 @@ export default {
     name: {
       type: String,
       required: true
+    },
+    hasClear: {
+      type: Boolean,
+      default: function () {
+        return false
+      }
+    },
+    disabled: {
+      type: Boolean,
+      default: function () {
+        return false
+      }
     }
   },
   created () {
@@ -146,4 +161,11 @@ export default {
 </script>
 
 <style lang="scss">
+  @import "../assets/scss/VueSelect";
+  .mau-form-input-select-dynamic-container {
+    .mau-form-input-select-dynamic {
+      padding: 0;
+      height: 38px;
+    }
+  }
 </style>

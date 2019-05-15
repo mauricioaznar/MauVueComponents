@@ -12,6 +12,7 @@
                 :track-by="trackBy"
                 :options="availableObjects"
                 :clearable="hasClear"
+                :disabled="disabled"
         >
             <template slot="option" slot-scope="option">
                 {{option[displayProperty]}}
@@ -83,6 +84,12 @@ export default {
       required: true
     },
     hasClear: {
+      type: Boolean,
+      default: function () {
+        return false
+      }
+    },
+    disabled: {
       type: Boolean,
       default: function () {
         return false
