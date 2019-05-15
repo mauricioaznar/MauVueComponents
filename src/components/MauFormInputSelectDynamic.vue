@@ -34,7 +34,7 @@ import isObjectEmpty from '../functions/isObjectEmpty'
 import _ from 'lodash'
 import ValidatorHelper from '../functions/ValidatorHelper'
 export default {
-  name: 'MauFormInputSelectObjectDynamic',
+  name: 'MauFormInputSelectDynamic',
   data () {
     return {
       selected: null,
