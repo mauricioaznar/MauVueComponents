@@ -127,6 +127,9 @@ export default {
     },
     initialObject: function (newInitialObject) {
       this.selected = newInitialObject
+    },
+    initialObjects: function (newInitialObjects) {
+      this.selected = newInitialObjects
     }
   }
 }
