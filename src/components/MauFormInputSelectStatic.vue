@@ -76,6 +76,12 @@ export default {
         return {}
       }
     },
+    initialObjects: {
+      type: Object,
+      default: function () {
+        return {}
+      }
+    },
     trackBy: {
       type: String,
       default: function () {
@@ -99,6 +105,8 @@ export default {
   created () {
     if (typeof this.initialObject === 'object' && Object.keys(this.initialObject).length !== 0) {
       this.selected = cloneDeep(this.initialObject)
+    } else if (this.multiselect === true && this.initialObjects.length > 0) {
+      this.selected = cloneDeep(this.initialObjects)
     }
   },
   components: {

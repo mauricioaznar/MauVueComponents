@@ -2,7 +2,6 @@ import MauFormInputText from './components/MauFormInputText.vue'
 import MauFormInputNumber from './components/MauFormInputNumber.vue'
 import MauFormInputDate from './components/MauFormInputDate.vue'
 import MauFormInputSelectStatic from './components/MauFormInputSelectStatic.vue'
-import MauFormInputSelectDynamic from './components/MauFormInputSelectDynamic.vue'
 import MauFormGroupDateTime from './components/MauFormGroupDateTime.vue'
 import MauFormInputCheckBox from './components/MauFormInputCheckBox.vue'
 import MauFormGroupCheckBoxes from './components/MauFormGroupCheckBoxes.vue'
@@ -15,7 +14,6 @@ const MauComponentsPlugin = {
     Vue.component('MauFormInputNumber', MauFormInputNumber)
     Vue.component('MauFormInputDate', MauFormInputDate)
     Vue.component('MauFormInputSelectStatic', MauFormInputSelectStatic)
-    Vue.component('MauFormInputSelectDynamic', MauFormInputSelectDynamic)
     Vue.component('MauFormGroupDateTime', MauFormGroupDateTime)
     Vue.component('MauFormInputCheckBox', MauFormInputCheckBox)
     Vue.component('MauFormGroupCheckBoxes', MauFormGroupCheckBoxes)
