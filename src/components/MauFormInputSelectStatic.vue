@@ -77,9 +77,9 @@ export default {
       }
     },
     initialObjects: {
-      type: Object,
+      type: Array,
       default: function () {
-        return {}
+        return []
       }
     },
     trackBy: {
