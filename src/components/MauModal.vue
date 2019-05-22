@@ -27,7 +27,8 @@
         </div>
       </transition>
     </div>
-    <button class="btn btn-primary btn-sm" @click="open">Click</button>
+    <span v-if="isIcon" :class="buttonClass" @click="open"></span>
+    <button v-if="isButton" class="btn btn-primary btn-sm" :class="buttonClass" @click="open">Click</button>
   </div>
 </template>
 
@@ -42,6 +43,24 @@ export default {
     title: {
       type: String,
       required: true
+    },
+    buttonType: {
+      type: String,
+      required: true,
+      validator: function (value) {
+        return ['button', 'icon']
+      }
+    },
+    buttonClass: {
+      type: String
+    }
+  },
+  computed: {
+    isButton: function () {
+      return this.buttonType === 'button'
+    },
+    isIcon: function () {
+      return this.buttonType === 'icon'
     }
   },
   methods: {
