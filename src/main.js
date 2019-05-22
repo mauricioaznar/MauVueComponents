@@ -7,6 +7,7 @@ import MauFormInputCheckBox from './components/MauFormInputCheckBox.vue'
 import MauFormGroupCheckBoxes from './components/MauFormGroupCheckBoxes.vue'
 import MauFormGroupTime from './components/MauFormGroupTime.vue'
 import MauFormGroupRadio from './components/MauFormGroupRadio.vue'
+import MauModal from './components/MauModal.vue'
 
 const MauComponentsPlugin = {
   install (Vue) {
@@ -19,6 +20,7 @@ const MauComponentsPlugin = {
     Vue.component('MauFormGroupCheckBoxes', MauFormGroupCheckBoxes)
     Vue.component('MauFormGroupTime', MauFormGroupTime)
     Vue.component('MauFormGroupRadio', MauFormGroupRadio)
+    Vue.component('MauModal', MauModal)
   }
 }
 

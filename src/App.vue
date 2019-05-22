@@ -1,4 +1,4 @@
-<template>
+<template xmlns:v-slot="http://www.w3.org/1999/XSL/Transform">
   <div id="app">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <div class="container">
@@ -52,13 +52,11 @@
         :error="''"
       >
       </mau-form-group-time>
-      <mau-form-input-select-dynamic
-        :endpointName="'test'"
-        :error="''"
-        :displayProperty="'name'"
-        :name="'selectDynamic'">
-
-      </mau-form-input-select-dynamic>
+      <mau-modal
+        :title="'Titulo'"
+      >
+        <div>Somehting simple</div>
+      </mau-modal>
     </div>
   </div>
 </template>
@@ -71,7 +69,7 @@ import MauFormGroupDateTime from './components/MauFormGroupDateTime.vue'
 import MauFormGroupCheckBoxes from './components/MauFormGroupCheckBoxes.vue'
 import MauFormGroupRadio from './components/MauFormGroupRadio.vue'
 import MauFormGroupTime from './components/MauFormGroupTime.vue'
-import MauFormInputSelectDynamic from './components/MauFormInputSelectDynamic.vue'
+import MauModal from './components/MauModal.vue'
 
 export default {
   data () {
@@ -98,7 +96,7 @@ export default {
     MauFormGroupCheckBoxes,
     MauFormGroupRadio,
     MauFormGroupTime,
-    MauFormInputSelectDynamic
+    MauModal
   }
 }
 </script>
