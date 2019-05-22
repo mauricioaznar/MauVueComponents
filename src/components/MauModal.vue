@@ -27,7 +27,7 @@
         </div>
       </transition>
     </div>
-    <button @click="open">Click</button>
+    <button class="btn btn-primary btn-sm" @click="open">Click</button>
   </div>
 </template>
 
