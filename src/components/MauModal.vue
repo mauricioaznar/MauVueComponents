@@ -28,7 +28,7 @@
       </transition>
     </div>
     <span v-if="isIcon" :class="buttonClass" @click="open"></span>
-    <button v-if="isButton" class="btn btn-primary btn-sm" :class="buttonClass" @click="open">Click</button>
+    <button v-if="isButton" class="btn btn-primary btn-sm" :class="buttonClass" @click="open">{{buttonTitle}}</button>
   </div>
 </template>
 
@@ -53,6 +53,12 @@ export default {
     },
     buttonClass: {
       type: String
+    },
+    buttonTitle: {
+      type: String,
+      default: function () {
+        return ''
+      }
     }
   },
   computed: {
