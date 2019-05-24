@@ -43,7 +43,7 @@ export default {
       return this.name
     },
     value () {
-      return this.value
+      return this.selected
     }
   },
   props: {
