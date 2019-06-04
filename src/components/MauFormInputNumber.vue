@@ -25,6 +25,7 @@
 import ValidatorHelper from '../functions/ValidatorHelper'
 import Masks from '../functions/Masks'
 import cleanNumber from '../functions/cleanNumber'
+import MaskedInput from 'vue-text-mask'
 export default {
   name: 'MauFormInputNumber',
   data () {
@@ -32,6 +33,9 @@ export default {
       numberString: '',
       mask: ''
     }
+  },
+  components: {
+    MaskedInput
   },
   created () {
     if (this.initialValue) {
