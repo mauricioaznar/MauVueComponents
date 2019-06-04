@@ -48,7 +48,6 @@ export default {
       },
       dateConfig: {
         wrap: true,
-        altInput: true,
         altInputClass: '',
         dateFormat: 'Y-m-d',
         locale: Spanish
