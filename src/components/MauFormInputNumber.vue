@@ -115,7 +115,7 @@ export default {
 </script>
 
 <style>
-  .mau-form-input-number {
+  .mau-form-input-number-container .mau-form-input-number {
     height: 38px;
   }
 </style>
