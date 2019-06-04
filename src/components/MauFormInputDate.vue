@@ -14,6 +14,7 @@
             :disabled="disabled"
             @change="updateValue"
             class="w-100 form-control mau-form-input-date"
+            :class="dateClass"
     >
     </flat-pickr>
     <div class="invalid-feedback">
@@ -38,6 +39,7 @@ export default {
       date: '',
       recentlyCreated: true,
       keyValue: 0,
+      dateClass: '',
       config: {
       },
       rangeConfig: {
@@ -117,15 +119,15 @@ export default {
   },
   watch: {
     error: function () {
-      let prevAltInputClass = this.config.altInputClass
+      let prevAltInputClass = this.dateClass
       let bootstrapValidationClass = this.getBootstrapValidationClass(this.error)
       if (this.error !== '') {
         if (!prevAltInputClass.includes(bootstrapValidationClass)) {
-          this.config.altInputClass = bootstrapValidationClass
+          this.dateClass = bootstrapValidationClass
           this.keyValue++
         }
       } else {
-        this.config.altInputClass = ''
+        this.dateClass = ''
         this.keyValue++
       }
     },
