@@ -19,14 +19,14 @@ const regularNumberNegative = createNumberMask({
 const quantityNumber = createNumberMask({
   prefix: '',
   suffix: '',
-  integerLimit: 6,
+  integerLimit: 9,
   includeThousandsSeparator: true,
   allowNegative: false
 })
 const quantityNumberNegative = createNumberMask({
   prefix: '',
   suffix: '',
-  integerLimit: 6,
+  integerLimit: 9,
   includeThousandsSeparator: true,
   allowNegative: true
 })
@@ -35,7 +35,7 @@ const floatNumber = createNumberMask({
   allowNegative: false,
   prefix: '',
   suffix: '',
-  integerLimit: 6,
+  integerLimit: 9,
   allowDecimal: true
 })
 const floatNumberNegative = createNumberMask({
@@ -43,7 +43,7 @@ const floatNumberNegative = createNumberMask({
   allowNegative: true,
   prefix: '',
   suffix: '',
-  integerLimit: 6,
+  integerLimit: 9,
   allowDecimal: true
 })
 export default {

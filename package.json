@@ -1,6 +1,6 @@
 {
   "name": "mau-vue-components",
-  "version": "0.21.17",
+  "version": "0.21.18",
   "private": false,
   "main": "./dist/maguas.common.js",
   "files": [
