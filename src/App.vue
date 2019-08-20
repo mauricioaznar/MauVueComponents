@@ -52,6 +52,13 @@
         :error="''"
       >
       </mau-form-group-time>
+      <mau-form-input-number
+        :error="''"
+        :label="''"
+        :initialValue="0"
+      >
+
+      </mau-form-input-number>
       <mau-modal
         :title="'Titulo'"
       >
@@ -69,6 +76,7 @@ import MauFormGroupDateTime from './components/MauFormGroupDateTime.vue'
 import MauFormGroupCheckBoxes from './components/MauFormGroupCheckBoxes.vue'
 import MauFormGroupRadio from './components/MauFormGroupRadio.vue'
 import MauFormGroupTime from './components/MauFormGroupTime.vue'
+import MauFormInputNumber from './components/MauFormInputNumber.vue'
 import MauModal from './components/MauModal.vue'
 
 export default {
@@ -96,6 +104,7 @@ export default {
     MauFormGroupCheckBoxes,
     MauFormGroupRadio,
     MauFormGroupTime,
+    MauFormInputNumber,
     MauModal
   }
 }
