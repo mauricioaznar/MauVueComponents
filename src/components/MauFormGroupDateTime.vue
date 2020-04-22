@@ -174,6 +174,7 @@ export default {
           { value: '44' },
           { value: '45' },
           { value: '46' },
+          { value: '47' },
           { value: '48' },
           { value: '49' },
           { value: '50' },
