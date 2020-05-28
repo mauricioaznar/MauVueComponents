@@ -13,6 +13,8 @@
                 :placeholder="placeholder"
                 :class="getBootstrapValidationClass(error)"
                 @input="updateValue"
+                @focus="inputFocused"
+                @blur="inputBlurred"
         />
         <input
                 v-if="type === textInputTypes.PASSWORD"
@@ -24,6 +26,8 @@
                 :placeholder="placeholder"
                 :class="getBootstrapValidationClass(error)"
                 @input="updateValue"
+                @focus="inputFocused"
+                @blur="inputBlurred"
         />
         <masked-input
                 v-if="type === textInputTypes.EMAIL"
@@ -36,6 +40,8 @@
                 :class="getBootstrapValidationClass(error)"
                 :placeholder="'Ejemplo: juanochoa@gmail.com'"
                 @input="updateValue"
+                @focus="inputFocused"
+                @blur="inputBlurred"
         >
         </masked-input>
         <masked-input
@@ -49,6 +55,8 @@
                 :class="getBootstrapValidationClass(error)"
                 :placeholder="'Ejemplo: 6322 542'"
                 @input="updateValue"
+                @focus="inputFocused"
+                @blur="inputBlurred"
         >
         </masked-input>
         <masked-input
@@ -62,6 +70,8 @@
                 :class="getBootstrapValidationClass(error)"
                 :placeholder="'Ejemplo: (999) 6322 542'"
                 @input="updateValue"
+                @focus="inputFocused"
+                @blur="inputBlurred"
         >
         </masked-input>
         <div class="invalid-feedback">
@@ -166,6 +176,12 @@ export default {
     getBootstrapValidationClass: ValidatorHelper.getBootstrapValidationClass,
     updateValue: function () {
       this.$emit('input', this.stringValue)
+    },
+    inputFocused: function () {
+      this.$emit('focus', true)
+    },
+    inputBlurred: function () {
+      this.$emit('blur', true)
     }
   },
   watch: {
