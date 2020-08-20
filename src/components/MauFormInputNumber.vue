@@ -38,8 +38,8 @@ export default {
     MaskedInput
   },
   created () {
-    if ((!this.negative && Number(this.initialValue) >= 0) || (this.negative && Number(this.initialValue) <= 0)) {
-      let initialNumberString = this.initialValue.toString()
+    if (Number(this.initialValue) >= 0 || Number(this.initialValue) <= 0) {
+      let initialNumberString = Number(this.initialValue).toString()
       this.numberString = initialNumberString
       this.updateValue(initialNumberString)
     }
