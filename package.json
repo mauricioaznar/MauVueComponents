@@ -26,7 +26,7 @@
     "text-mask-addons": "^3.8.0",
     "vue": "^2.6.10",
     "vue-flatpickr-component": "^8.1.2",
-    "vue-resource": "^1.5.1",
+    "vue-resource": "^1.5.3",
     "vue-select": "^2.6.4",
     "vue-text-mask": "^6.1.2"
   },
